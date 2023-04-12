@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Fraunces:wght@700&family=Inconsolata&family=Inter:wght@400;700&family=Montserrat:wght@500;700&family=Nunito&family=Nunito+Sans&family=Outfit:wght@300;400;600;700&family=Pacifico&family=Quicksand:wght@400;600&family=Red+Hat+Display:wght@500;700;900&family=Rubik&family=VT323&display=swap');
+
+* {
+    font-family: 'Fraunces', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --main-padding: 16px
+}
+
+main {
+    font-size: 14px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+    padding: var(--main-padding);
+}
+
+main .card {
+    max-width: 600px;
+    min-height: 50%;
+    display: flex;
+    /* justify-content: space-between; */
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.card-image {
+    /* background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    width: 50%;
+    height: 100%;
+
+
+}
+
+.card-image img {
+    border-radius: 7px 0 0 7px;
+    -webkit-border-radius: 7px 0 0 7px;
+    -moz-border-radius: 7px 0 0 7px;
+    -ms-border-radius: 7px 0 0 7px;
+    -o-border-radius: 7px 0 0 7px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+main .card>.desc {
+    padding: 32px;
+    width: 50%;
+
+}
+
+main .card>.desc h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.857rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--Dark-grayish-blue);
+    line-height: 14.63px;
+    margin-bottom: 20px;
+}
+
+main .card>.desc .main {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--Very-dark-blue);
+    margin-bottom: 24px;
+}
+
+main .card>.desc .desc {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 0 0 29px 0.5px;
+    line-height: 23px;
+    color: var(--Dark-grayish-blue);
+}
+
+main .card>.desc .price {
+    display: flex;
+    margin-right: 74px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+main .card>.desc .price .new {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--dark-cyan);
+    padding-right: 19px;
+}
+
+main .card>.desc .price .old {
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    line-height: 23px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+main .card>.desc .add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    text-align: center;
+    background-color: var(--dark-cyan);
+    color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+
+main .card>.desc .add-btn::before {
+    content: url(../images/icon-cart.svg);
+
+    position: absolute;
+    left: 55px;
+    top: 15px;
+
+}
+
+@media (max-width:635px) {
+    main {
+        align-items: flex-start;
+    }
+
+    .card {
+        /* margin-top: 1rem;
+        margin-bottom: 1rem; */
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    main .card>.desc {
+        width: 100%;
+        padding: 32px;
+    }
+
+    main .card>.desc h1 {
+        margin-bottom: 12px;
+    }
+
+    main .card>.desc .main {
+        margin-bottom: 16px;
+    }
+
+    main .card>.desc .desc {
+        margin-bottom: 20px;
+    }
+
+    main .card>.desc .add-btn {
+        margin-bottom: 20px;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 40%;
+
+
+    }
+
+    .card-image img {
+        content: url(../images/image-product-mobile.jpg);
+    }
+}
